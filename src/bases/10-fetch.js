@@ -1,19 +1,32 @@
+const apiKey = 'EhdRmrgVkNVGNw9aYoKS90hAJgBbPYz5';
 
-const apiKey = 'C1khQe3Z7R1W2lfTO9myKeuShdqFYSGC';
+const petition = fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`);
 
-const peticion = fetch(`http://api.giphy.com/v1/gifs/random?api_key=${ apiKey }`);
+// One way of doing this is:
+// petition
+// .then(response => {
+//   response.json()
+// .then(data => {
+//     console.log(data);
+//   });
+// })
+// .catch(console.warn)
 
-peticion
-    .then( resp => resp.json() )
-    .then( ({ data }) => {
-        const { url } = data.images.original;
-        
-        const img = document.createElement('img');
-        img.src = url;
+// Second way of doing this is:
+// petition
+// .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(console.warn)
 
-        document.body.append( img );
+// Third way of doing this with destructuring:
+petition
+.then(response => response.json())
+.then(({ data }) => {
+  const { url } = data.images.original;
+  console.log(url);
+  const img = document.createElement('img');
+  img.src = url;
 
-
-    })
-    .catch( console.warn );
-
+  document.body.append(img)
+})
+.catch(console.warn)
