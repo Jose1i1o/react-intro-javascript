@@ -1,19 +1,17 @@
+const active = true;
 
+// let message = '';
 
-const activo = true;
-
-// let mensaje = '';
-
-// if ( !activo ) {
-//     mensaje = 'Activo';
+// if (active) {
+//   message = 'Active';
 // } else {
-//     mensaje = 'Inactivo';
+//   message = 'Disabled';
 // }
-// const mensaje = ( activo ) ? 'Activo' : 'Inactivo'; 
-// const mensaje = ( activo ) ? 'Activo' : null; 
-const mensaje = activo && 'Activo';
 
+// const message = (active) ? 'Active' : 'Disabled';
+// console.log(message);
 
-console.log(mensaje);
-
+// const message = (active === true) && 'Active';
+const message = active && 'Active'; // shorter to previous
+console.log(message);
 
