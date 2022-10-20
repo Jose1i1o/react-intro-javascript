@@ -1,15 +1,15 @@
 
 
-const personajes = ['Goku','Vegeta','Trunks'];
-const [ , , p3 ] = personajes;
-console.log( p3 );
+const personajes = ['Goku', 'Vegeta', 'Trunks'];
+const [p3] = personajes;
+console.log(p3);
 
 
-const retornaArreglo = () =>{
+const retornaArray = () => {
     return ['ABC', 123];
 }
 
-const [ letras, numeros ] = retornaArreglo(); 
+const [letras, numeros] = retornaArray();
 console.log(letras, numeros);
 
 
@@ -17,13 +17,13 @@ console.log(letras, numeros);
 // 1. el primer valor del arr se llamará nombre
 // 2. se llamará setNombre
 
-const useState = ( valor ) => {
-    return [ valor, ()=>{ console.log('Hola Mundo') } ];
+const useState = (valor) => {
+    return [valor, () => { console.log('Hola Mundo') }];
 }
+console.log(useState)
+const [nombre, setNombre] = useState('Goku');
 
-const [ nombre, setNombre ] = useState( 'Goku' );
-
-console.log( nombre );
+console.log(nombre);
 setNombre();
 
 

@@ -1,14 +1,14 @@
-import heroes, { owners } from '../data/heroes';
+import heroes, { owners } from '../data/heroes.js';
 
-const getHeroeById = (id) => heroes.find(heroe => heroe.id === id);
+export const getHeroeById = (id) => heroes.find(heroe => heroe.id === id);
 
-console.log(getHeroeById(2));
+// console.log(getHeroeById(2));
 
 const getHeroesByBrand = (brand) => heroes.filter(heroe => heroe.owner === brand);
 const DCHeroes = getHeroesByBrand('DC');
-console.log(DCHeroes);
+// console.log(DCHeroes);
 
 const MarvelHeroes = getHeroesByBrand('Marvel');
-console.log(MarvelHeroes);
+// console.log(MarvelHeroes);
 
-console.log(owners);
+// console.log(owners);

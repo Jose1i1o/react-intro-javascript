@@ -1,4 +1,6 @@
-const active = true;
+const active = {
+  data: true
+};
 
 // let message = '';
 
@@ -8,10 +10,10 @@ const active = true;
 //   message = 'Disabled';
 // }
 
-// const message = (active) ? 'Active' : 'Disabled';
-// console.log(message);
+const message = (active) ? true : false;
+console.log(message);
 
 // const message = (active === true) && 'Active';
-const message = active && 'Active'; // shorter to previous
-console.log(message);
+// const message = active?.data && 'Hello Spiderman'; // shorter to previous
+// console.log(message);
 

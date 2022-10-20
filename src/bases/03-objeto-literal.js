@@ -1,5 +1,3 @@
-
-
 const persona = {
     nombre: 'Tony',
     apellido: 'Stark',
@@ -14,15 +12,12 @@ const persona = {
 
 // console.table( persona );
 
-const persona2 = { ...persona };
+const persona2 = { ...persona }; // Copio SIN MUTAR
 persona2.nombre = 'Peter';
 
 
-console.log( persona );
-console.log( persona2 )
-
-
-
+// console.log(persona);
+// console.log(persona2);
 
 
 
